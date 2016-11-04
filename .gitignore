@@ -174,5 +174,12 @@ $RECYCLE.BIN/
 /MikuMikuFlex/MikuMikuFlex/x64
 /Samples/10.5 WPFでウィジィットを作る/obj
 
+/packages
+/PokemonGoMap/obj
+/.vs
+/PokemonGoMap/bin/Release
+/PokemonGoMap/bin/Debug
+/PokemonGoMap/bin/Data
+/PokemonGoMap/bin/SimpleFileServer.exe
 
 packages/

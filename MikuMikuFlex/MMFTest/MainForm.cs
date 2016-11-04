@@ -3,6 +3,7 @@
 
 using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 using MMF;
@@ -16,6 +17,7 @@ using MMF.Model.Shape.Overlay;
 using MMF.Sprite;
 using MMF.Sprite.D2D;
 using SlimDX;
+using SlimDX.Direct2D;
 using SlimDX.Direct3D11;
 using SlimDX.DirectWrite;
 using SlimDX.DXGI;
@@ -29,7 +31,7 @@ namespace CGTest
     {
         public static TransformController Controller;
 
-        // private Brush brush;
+        //private Brush brush;
         //private D2DSpriteTextformat _format;
         //private IDynamicTexture _tex2;
         //private ShaderResourceView _resourceView;
@@ -66,9 +68,15 @@ namespace CGTest
             //WorldSpace.AddResource(bill);
             //Bill.Transformer.Position = new Vector3(0, 0, 20);
 
-            //format = SpriteBatch.CreateTextformat("Meiriyo", 30, FontWeight.ExtraBold);
-            //brush = SpriteBatch.CreateRadialGradientBrush(g,
-            //    new RadialGradientBrushProperties() {CenterPoint = new PointF(100,100),GradientOriginOffset = new PointF(0,0),HorizontalRadius = 100f,VerticalRadius = 200f}).Brush;
+            //_format = SpriteBatch.CreateTextformat("Meiriyo", 30, FontWeight.ExtraBold);
+            //this.SpriteBatch.CreateRadialGradientBrush(g,
+            //    new RadialGradientBrushProperties()
+            //    {
+            //        CenterPoint = new PointF(100, 100),
+            //        GradientOriginOffset = new PointF(0, 0),
+            //        HorizontalRadius = 100f,
+            //        VerticalRadius = 200f
+            //    }).Brush = this.brush;
             //brush = SpriteBatch.CreateSolidColorBrush(Color.Aquamarine);
 
             this.ScreenContext.CameraMotionProvider = new BasicCameraControllerMotionProvider(this, this);
@@ -100,22 +108,16 @@ namespace CGTest
             e.Cancel = false;
         }
 
+        /// <summary>
+        ///     Sprite drawing here
+        /// </summary>
         protected override void RenderSprite()
         {
-            
+            //SpriteBatch.DWRenderTarget.FillRectangle(brush, SpriteBatch.FillRectangle);
+            //SpriteBatch.DWRenderTarget.DrawText(
+            //    string.Format("FPS:{0}\n\nBrush Test!!", FpsCounter.FPS.ToString("####.#")), _format,
+            //    SpriteBatch.FillRectangle, brush);
         }
-
-        ///// <summary>
-        /////     Sprite drawing here
-        ///// </summary>
-        //protected override void RenderSprite()
-        //{
-
-        //    //SpriteBatch.DWRenderTarget.FillRectangle(brush,SpriteBatch.FillRectangle);
-        //    //SpriteBatch.DWRenderTarget.DrawText(
-        //    //    string.Format("FPS:{0}\n\nBrush Test!!", FpsCounter.FPS.ToString("####.#")), format,
-        //    //    SpriteBatch.FillRectangle, brush);
-        //}
 
         protected override void OnPresented()
         {

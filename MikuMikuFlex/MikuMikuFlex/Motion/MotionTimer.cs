@@ -11,7 +11,7 @@ namespace MMF.Motion
 
          
         /// <summary>
-        /// MMDThe number of frames per second around
+        /// The number of frames per second around
         /// Typically 30。
         /// </summary>
         public int MotionFramePerSecond = 30;

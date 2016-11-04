@@ -23,16 +23,32 @@ namespace MMF.DeviceManager
         {
             Texture2DDescription commonDesc = new Texture2DDescription()
             {
-                ArraySize = 1,
-                BindFlags = BindFlags.None,
-                CpuAccessFlags = CpuAccessFlags.Read,
-                Format = Format.Unknown,
                 Height = 1,
                 Width = 1,
                 MipLevels = 1,
-                OptionFlags = ResourceOptionFlags.None,
+                ArraySize = 1,
+                Format = Format.D24_UNorm_S8_UInt,
                 SampleDescription = new SampleDescription(1, 0),
-                Usage = ResourceUsage.Staging
+                Usage = ResourceUsage.Staging,
+                BindFlags = BindFlags.DepthStencil,
+                CpuAccessFlags = CpuAccessFlags.None,
+                OptionFlags = ResourceOptionFlags.None,
+
+                /*
+                Width = ClientWidth,
+                Height = ClientHeight,
+                MipLevels = 1,
+                ArraySize = 1,
+                Format = Format.D24_UNorm_S8_UInt,
+                SampleDescription =
+                    (Enable4XMsaa && Device.FeatureLevel >= FeatureLevel.Level_10_1)
+                        ? new SampleDescription(aa, Msaa4XQuality - 1)
+                        : new SampleDescription(1, 0),
+                Usage = ResourceUsage.Default,
+                BindFlags = BindFlags.DepthStencil,
+                CpuAccessFlags = CpuAccessFlags.None,
+                OptionFlags = ResourceOptionFlags.None
+                 */
             };
             Texture2DDescription gpuDesc = commonDesc;
             gpuDesc.CpuAccessFlags=CpuAccessFlags.None;

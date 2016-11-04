@@ -105,6 +105,7 @@ namespace MMF.Controls.Forms
 #endif
             this.ScreenContext.SwapChain.Present(0, PresentFlags.None);
             OnPresented();
+            this.Text = "FPS: " + this.FpsCounter.FPS;
         }
 
         protected override void OnHandleDestroyed(EventArgs e)

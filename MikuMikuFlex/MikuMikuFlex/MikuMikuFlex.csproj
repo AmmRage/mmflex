@@ -232,6 +232,7 @@
     <Compile Include="Morph\UVMorphData.cs" />
     <Compile Include="Morph\UVMorphProvider.cs" />
     <Compile Include="Morph\VertexMorphProvider.cs" />
+    <Compile Include="RenderQualityConfig.cs" />
     <Compile Include="Sprite\D2DSpriteBatch.cs" />
     <Compile Include="Sprite\D2D\D2DSpriteBitmap.cs" />
     <Compile Include="Sprite\D2D\D2DSpriteBitmapBrush.cs" />

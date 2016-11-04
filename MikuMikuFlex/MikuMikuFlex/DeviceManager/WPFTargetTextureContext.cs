@@ -23,7 +23,7 @@ namespace MMF.DeviceManager
             colordesc.Width = this.Size.Width;
             colordesc.Height = this.Size.Height;
             colordesc.MipLevels = 1;
-            colordesc.SampleDescription = new SampleDescription(1, 0);
+            colordesc.SampleDescription = new SampleDescription(RenderQualityConfig.AaCount, RenderQualityConfig.AaQuality);
             colordesc.Usage = ResourceUsage.Default;
             colordesc.OptionFlags = ResourceOptionFlags.Shared;
             colordesc.CpuAccessFlags = CpuAccessFlags.None;

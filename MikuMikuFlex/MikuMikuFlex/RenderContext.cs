@@ -17,6 +17,8 @@ using FillMode = SlimDX.Direct3D11.FillMode;
 
 namespace MMF
 {
+
+    
     /// <summary>
     /// Contains various information about the rendering。
     /// This reference can be necessary when the 3D drawing lot

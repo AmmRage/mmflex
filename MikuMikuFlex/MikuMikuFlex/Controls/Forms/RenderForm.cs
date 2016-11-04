@@ -192,6 +192,8 @@ namespace MMF.Controls.Forms
             this.ScreenContext.WorldSpace.DrawAllResources(this.ScreenContext.HitChekcer);
             this.ScreenContext.SwapChain.Present(0, PresentFlags.None);
             OnPresented();
+
+            this.Text = "FPS: " + this.FpsCounter.FPS;
         }
 
         protected virtual void OnPresented()

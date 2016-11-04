@@ -60,7 +60,7 @@ namespace MMF.DeviceManager
                 Height = 1,
                 Width = 1,
                 MipLevels = 1,
-                SampleDescription = new SampleDescription(1, 0)
+                SampleDescription = new SampleDescription(1, RenderQualityConfig.AaQuality)
             });
             this.targetFloatTexture = this.renderContext.CreateTexture2D(new Texture2DDescription()
             {
@@ -73,7 +73,7 @@ namespace MMF.DeviceManager
                 Height = 1,
                 Width = 1,
                 MipLevels = 1,
-                SampleDescription = new SampleDescription(1, 0)
+                SampleDescription = new SampleDescription(1, RenderQualityConfig.AaQuality)
             });
             Resize(new Size(100,100));
         }
@@ -90,7 +90,7 @@ namespace MMF.DeviceManager
                 Usage = ResourceUsage.Default,
                 Format = Format.R32_Float,
                 OptionFlags = ResourceOptionFlags.None,
-                SampleDescription = new SampleDescription(1, 0),
+                SampleDescription = new SampleDescription(RenderQualityConfig.AaCount, RenderQualityConfig.AaQuality),
                 Width = size.Width,
                 Height = size.Height,
                 BindFlags = BindFlags.RenderTarget,
@@ -106,7 +106,7 @@ namespace MMF.DeviceManager
                 Usage = ResourceUsage.Default,
                 Format = Format.R32_UInt,
                 OptionFlags = ResourceOptionFlags.None,
-                SampleDescription = new SampleDescription(1, 0),
+                SampleDescription = new SampleDescription(RenderQualityConfig.AaCount, RenderQualityConfig.AaQuality),
                 Width = size.Width,
                 Height = size.Height,
                 BindFlags = BindFlags.RenderTarget,
@@ -122,7 +122,7 @@ namespace MMF.DeviceManager
                 Usage = ResourceUsage.Default,
                 Format = Format.D32_Float,
                 OptionFlags = ResourceOptionFlags.None,
-                SampleDescription = new SampleDescription(1, 0),
+                SampleDescription = new SampleDescription(RenderQualityConfig.AaCount, RenderQualityConfig.AaQuality),
                 Width = size.Width,
                 BindFlags = BindFlags.DepthStencil,
                 Height = size.Height,

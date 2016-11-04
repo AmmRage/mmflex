@@ -14,7 +14,7 @@ namespace MMF.DeviceManager
         public ScreenContext(Control owner,RenderContext context,MatrixManager manager):base(context)
         {
             Device device = context.DeviceManager.Device;
-            SampleDescription sampleDesc = new SampleDescription(4, 0); //zy 1
+            SampleDescription sampleDesc = new SampleDescription(RenderQualityConfig.AaCount, RenderQualityConfig.AaQuality); //zy 1
             this.SwapChain = new SwapChain(context.DeviceManager.Factory, device, getSwapChainDescription(owner, sampleDesc));
             //Set rasterizer
             //Initialization of the depth stencil Buffa

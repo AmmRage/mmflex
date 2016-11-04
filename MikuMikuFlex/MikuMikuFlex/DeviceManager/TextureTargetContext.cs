@@ -20,7 +20,7 @@ namespace MMF.DeviceManager
 
         private FPSCounter fpsCounter;
 
-        private SampleDescription sampleDesc = new SampleDescription(1, 0);
+        private SampleDescription sampleDesc = new SampleDescription(RenderQualityConfig.AaCount, RenderQualityConfig.AaQuality);
         /// <summary>
         /// Multimedia sample Gets or sets．
         /// As much as possible, to adopt a set close to the specified value.
@@ -43,7 +43,7 @@ namespace MMF.DeviceManager
                         break;
                     }
 
-                    // マルチサンプル数がサポートされない場合
+                    // If a multi-sample number is not supported
                     count--;
                 } while (count > 0);
                 if(this.size.Width>0&& this.size.Height>0)

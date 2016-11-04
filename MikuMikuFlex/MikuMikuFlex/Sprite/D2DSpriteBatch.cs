@@ -217,7 +217,7 @@ namespace MMF.Sprite
                 MipLevels = 1,
                 ArraySize = 1,
                 Format = Format.B8G8R8A8_UNorm,
-                SampleDescription = new SampleDescription(1, 0),
+                SampleDescription = new SampleDescription(1, RenderQualityConfig.AaQuality),
                 Usage = ResourceUsage.Default,
                 BindFlags = BindFlags.RenderTarget | BindFlags.ShaderResource,
                 CpuAccessFlags = CpuAccessFlags.None,

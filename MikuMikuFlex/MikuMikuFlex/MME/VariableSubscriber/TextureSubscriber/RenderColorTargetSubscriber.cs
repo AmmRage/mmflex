@@ -46,7 +46,7 @@ namespace MMF.MME.VariableSubscriber.TextureSubscriber
                 Width = width,
                 MipLevels = mip,
                 OptionFlags = ResourceOptionFlags.None,
-                SampleDescription = new SampleDescription(1, 0),
+                SampleDescription = new SampleDescription(RenderQualityConfig.AaCount, RenderQualityConfig.AaQuality),
                 Usage = ResourceUsage.Default
             };
             subscriber.renderTexture=new Texture2D(context.DeviceManager.Device,tex2DDesc);
